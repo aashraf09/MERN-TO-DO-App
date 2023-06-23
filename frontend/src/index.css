@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:wght@400;500;600&display=swap');
+
+
+/* GENERAL SETTING */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 150%;
+  font-weight: bolder;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+a,
+.instructions b {
+  color: #693a1e;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.btn {
+  background-color: #693a1e;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  font-weight: bolder;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-primary {
+  color: #693a1e;
+  background-color: transparent;
+}
+
+label {
+  margin: 0 0 .5rem 0;
+  font-size: 1.4rem;
+}
+
+form input {
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1px solid grey;
+}
+
+/* COMMON SETTING + APP.JS STYLING */
+
+.app {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  place-items: center;
+  text-align: center;
+  background-image: url('./media/bg-3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* sign up and login page */
+
+.authentication {
+  height: 85vh;
+  width: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5), -5px -5px 15px 0px rgba(207, 207, 207, 0.5);
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+  position: relative;
+}
+
+.instructions {
+  display: block;
+  position: absolute;
+  font-size: 12px;
+  border-radius: .8rem;
+  background: #fff;
+  color: #000;
+  padding: 10px 30px;
+  top: 100%;
+  text-align: left;
+  z-index: 1;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+
+.instructions ul {
+  margin-top: 10px;
+}
+
+.instructions b {
+  font-size: 14px;
+}
+
+.offscreen {
+  display: none;
+}
+
+.notification {
+  color: red;
+  font-weight: bolder;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+}
+
+/* HOME PAGE */
+.home {
+  height: 95vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5), -5px -5px 15px 0px rgba(207, 207, 207, 0.5);
+}
+
+.home .notification{
+  width: 30vw;
+  text-align: center;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto 0 auto;
+}
+
+.userInfo h2{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #c9c9c9;
+  -webkit-text-fill-color: #000000;
+  letter-spacing: 5px;
+  text-decoration:underline;
+  text-underline-offset: 30%;
+  /* gap: 5px; */
+  
+}
+
+.add-to-do {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.add-to-do input {
+  width: 50%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #693a1e;
+  outline: none;
+}
+
+.show-to-do {
+  height: 60vh;
+  margin: 3rem 0;
+  width: 70vw;
+  font-size: 1.6rem;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  display: grid;
+  overflow-y: auto;
+  place-items: center;
+}
+
+.show-to-do li {
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #693a1e73;
+  border: 1px solid #693a1e;
+  color: white;
+  border-radius: 10px;
+  margin: 1rem;
+  padding: .8rem 1.5rem;
+  list-style-type: none;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 425px) {
+  .authentication {
+    height: 90vh;
+    width: 90vw;
+  }
+
+  .home {
+    height: 95vh;
+    width: 90vw;
+  }
+
+  .show-to-do {
+    height: 60vh;
+    width: 80vw;
+  }
+  
+  .show-to-do li {
+    width: 70vw;
+  }
+}
+
+
+
+/* Scroll bar design */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #B3ABB9 #060224;
+}
+
+
+*::-webkit-scrollbar {
+  width: 7px;
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #060224;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #0C0446;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #2E2E2E;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #B3ABB9;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #D8CCE3;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #E1CAEA;
+}
